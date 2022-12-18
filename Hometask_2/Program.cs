@@ -1,6 +1,6 @@
 ﻿//------------------------------Задача 1------------------------------------------------------------
 
-// int EnterNum(int x){
+// int EnterNum(int x = 0){
 //     for(int i = 0; x > 999|x < 100; i++)
 //         {   
 //         try
@@ -22,56 +22,55 @@
 //     Console.WriteLine(x);
 // }
 
-// int start = 0;
-// int num = EnterNum(start);
+// int num = EnterNum();
 // int digit2 = SecondDigit(num);
 // OutPutD2(digit2);
 
 //------------------------------Задача 2-----------------------------------------------------------
 
-// int EnterNum(int x){
-//     while (true)
-//         {  
-//             try
-//             {
-//                 Console.WriteLine("\nВведите число не более девятизначного\nи я скажу вам его третью цифру : ");
-//                 x = Convert.ToInt32(Console.ReadLine());
-//                 break;
-//             }
-//             catch{}
-//         }
-//     return x;
-// }
-// int ThirdDigit(int x){
-//     x = x/100%10;
-//     return x;
-// }
-// bool HowNumber(int x){
-//     bool y = true;
-//     if(x == 0){
-//         y = false;
-//     }
-//     return y;
-// }
-// void OutPutD3(int x, bool y){
-//     if(y == true){
-//         Console.WriteLine("\nЭто третья цифра вашего числа: ");
-//         Console.WriteLine(x);
-//     }
-//     else{
-//         Console.WriteLine("\nТретьей цифры нет!");
-//     }
-// }   
+long EnterNum(long x = 0){
+    while (true)
+        {  
+            try
+            {
+                Console.WriteLine("\nВведите число и я скажу вам его третью цифру : ");
+                x = Convert.ToInt64(Console.ReadLine());
+                break;
+            }
+            catch{}
+        }
+    return x;
+}
+long ThirdDigit(long x){
+    x = x/100%10;
+    return x;
+}
+bool HowNumber(long x){
+    bool y = true;
+    if(x == 0){
+        y = false;
+    }
+    return y;
+}
+void OutPutD3(long x, bool y){
+    if(y == true){
+        Console.Write("\n"+x);
+        Console.WriteLine(" - Это третья цифра вашего числа: ");
+    }
+    else{
+        Console.WriteLine("\nТретьей цифры нет!");
+    }
+}   
 
-// int start = 0;
-// int number = EnterNum(start);
-// int digit3 = ThirdDigit(number);
-// bool trf = HowNumber(digit3);
-// OutPutD3(digit3, trf);
+
+long num = EnterNum();
+long digit3 = ThirdDigit(num);
+bool tumbler = HowNumber(digit3);
+OutPutD3(digit3, tumbler);
 
 //------------------------------Задача 3------------------------------------------------------------
 
-// int EnterDayNum(int x){
+// int EnterDayNum(int x = 0){
 //     for(int i = 0; x > 7|x == 0; i++)
 //     {       try
 //                 {
@@ -104,10 +103,9 @@
 //     }
 // }
 
-// int start = 0;
-// int weekDay = EnterDayNum(start);
-// bool day = IsWeekend(weekDay);
-// OutPutDay(day);
+// int weekDay = EnterDayNum();
+// bool flag = IsWeekend(weekDay);
+// OutPutDay(flag);
 
 
 
