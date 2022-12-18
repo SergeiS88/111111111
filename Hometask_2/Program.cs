@@ -17,38 +17,34 @@
 //     int y = x%100/10;
 //     return y;
 // }
-// void OutPut(int x){
+// void OutPutD2(int x){
 //     Console.WriteLine("\nЭто вторая цифра вашего числа:\n");
 //     Console.WriteLine(x);
 // }
 
-// int i = 0;
-// int num = EnterNum(i);
+// int start = 0;
+// int num = EnterNum(start);
 // int digit2 = SecondDigit(num);
-// OutPut(digit2);
+// OutPutD2(digit2);
 
 //------------------------------Задача 2-----------------------------------------------------------
 
 // int EnterNum(int x){
-//     int i = 0;
 //     while (true)
 //         {  
 //             try
 //             {
-//                 if(i>0){Console.WriteLine("\nПожалуйста введите число.\n");}
-//                 if(i==0){Console.WriteLine("\nВведите число и я скажу вам его третью цифру : \n");}
+//                 Console.WriteLine("\nВведите число не более девятизначного\nи я скажу вам его третью цифру : ");
 //                 x = Convert.ToInt32(Console.ReadLine());
 //                 break;
 //             }
 //             catch{}
-//             i++;
 //         }
 //     return x;
 // }
 // int ThirdDigit(int x){
-//     int y;
-//     y = x/100%10;
-//     return y;
+//     x = x/100%10;
+//     return x;
 // }
 // bool HowNumber(int x){
 //     bool y = true;
@@ -57,7 +53,7 @@
 //     }
 //     return y;
 // }
-// void OutPut(int x, bool y){
+// void OutPutD3(int x, bool y){
 //     if(y == true){
 //         Console.WriteLine("\nЭто третья цифра вашего числа: ");
 //         Console.WriteLine(x);
@@ -67,51 +63,51 @@
 //     }
 // }   
 
-// int i = 0;
-// int number = EnterNum(i);
+// int start = 0;
+// int number = EnterNum(start);
 // int digit3 = ThirdDigit(number);
 // bool trf = HowNumber(digit3);
-// OutPut(digit3, trf);
+// OutPutD3(digit3, trf);
 
 //------------------------------Задача 3------------------------------------------------------------
 
-// int EnterDayNum(int x){
-//     for(int i = 0; x > 7|x == 0; i++)
-//     {       try
-//                 {
-//                 if(i>0){Console.WriteLine("\nПожалуйста введите цифру от 1 до 7 включительно.");
-//                     Console.WriteLine("В неделе 7 дней!\nПн - 1\nВт - 2\nСр - 3\nЧт - 4\nПт - 5\nСб - 6\nВс - 7\n");}
-//                 if(i==0){Console.WriteLine("\nВведите цифру, обозначающую день недели и узнаете выходной ли он.\n");}
-//                     x = Convert.ToInt32(Console.ReadLine());
-//                 }
-//             catch{}
-//     }
-//     return x;
-// }
-// bool IsWeekend(int x){   
+int EnterDayNum(int x){
+    for(int i = 0; x > 7|x == 0; i++)
+    {       try
+                {
+                if(i>0){Console.WriteLine("\nПожалуйста введите цифру от 1 до 7 включительно.");
+                    Console.WriteLine("В неделе 7 дней!\nПн - 1\nВт - 2\nСр - 3\nЧт - 4\nПт - 5\nСб - 6\nВс - 7\n");}
+                if(i==0){Console.WriteLine("\nВведите цифру, обозначающую день недели и узнаете выходной ли он.\n");}
+                    x = Convert.ToInt32(Console.ReadLine());
+                }
+            catch{}
+    }
+    return x;
+}
+bool IsWeekend(int x){   
 
-//     bool y = true;
-//     if(x < 6)
-//     {
-//     y = false;
-//     }
-//     return y;
-// }
-// void OutPut(bool x){
-//     if(x == true)
-//     {
-//     Console.WriteLine("\nВыходной!!!");
-//     }
-//     else 
-//     {
-//     Console.WriteLine("\nРабочий.\n");
-//     }
-// }
+    bool y = true;
+    if(x < 6)
+    {
+    y = false;
+    }
+    return y;
+}
+void OutPutDay(bool x){
+    if(x == true)
+    {
+    Console.WriteLine("\nВыходной!!!");
+    }
+    else 
+    {
+    Console.WriteLine("\nРабочий.");
+    }
+}
 
-// int num = 0;
-// int weekDay = EnterDayNum(num);
-// bool day = IsWeekend(weekDay);
-// OutPut(day);
+int start = 0;
+int weekDay = EnterDayNum(start);
+bool day = IsWeekend(weekDay);
+OutPutDay(day);
 
 
 
