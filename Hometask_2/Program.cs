@@ -28,45 +28,63 @@
 
 //------------------------------Задача 2-----------------------------------------------------------
 
-long EnterNum(long x = 0){
-    while (true)
-        {  
-            try
-            {
-                Console.WriteLine("\nВведите число и я скажу вам его третью цифру : ");
-                x = Convert.ToInt64(Console.ReadLine());
-                break;
-            }
-            catch{}
-        }
-    return x;
-}
-long ThirdDigit(long x){
-    x = x/100%10;
-    return x;
-}
-bool HowNumber(long x){
-    bool y = true;
-    if(x == 0){
-        y = false;
-    }
-    return y;
-}
-void OutPutD3(long x, bool y){
-    if(y == true){
-        Console.Write("\n"+x);
-        Console.WriteLine(" - Это третья цифра вашего числа: ");
-    }
-    else{
-        Console.WriteLine("\nТретьей цифры нет!");
-    }
-}   
+// long EnterNum(long x = 0){
+//     while (true)
+//         {  
+//             try
+//             {
+//                 Console.WriteLine("\nВведите число и я скажу вам его третью цифру : ");
+//                 x = Convert.ToInt64(Console.ReadLine());
+//                 break;
+//             }
+//             catch{}
+//         }
+//     return x;
+// }
+// long ThirdDigit(long x){
+//     x = x/100%10;
+//     return x;
+// }
+// bool HowNumber(long x){
+//     bool y = true;
+//     if(x == 0){
+//         y = false;
+//     }
+//     return y;
+// }
+// void OutPutD3(long x, bool y){
+//     if(y == true){
+//         Console.Write("\n"+x);
+//         Console.WriteLine(" - Это третья цифра вашего числа: ");
+//     }
+//     else{
+//         Console.WriteLine("\nТретьей цифры нет!");
+//     }
+// }   
 
 
-long num = EnterNum();
-long digit3 = ThirdDigit(num);
-bool tumbler = HowNumber(digit3);
-OutPutD3(digit3, tumbler);
+// long num = EnterNum();
+// long digit3 = ThirdDigit(num);
+// bool tumbler = HowNumber(digit3);
+// OutPutD3(digit3, tumbler);
+
+//------------------------------Задача 2 __ v2---------------------------------------------------------
+
+
+Console.WriteLine("Введите число чтоб увидеть его третью цифру: ");
+string str = Console.ReadLine();
+char[] nums = new char[str.Length];
+for(int i = 0; i < str.Length; i++){
+    nums[i] = str[i];
+}
+if(nums.Length > 2){
+    int j = nums.Length - 3;
+    Console.WriteLine(nums[j]);
+}
+else{
+    Console.WriteLine("Ваше число маловато!");
+}
+
 
 //------------------------------Задача 3------------------------------------------------------------
 
