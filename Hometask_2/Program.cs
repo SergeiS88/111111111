@@ -1,55 +1,45 @@
-﻿//------------------------------Задача 1----------------
+// ------------------------------Задача 1----------------
 // int SecondDigit(int x = 0){
-//     for(int i = 0; x > 999|x < 100; i++)
-//         {   
-//         try
-//             {
-//             if(i>0){Console.WriteLine("\nПожалуйста введите трёхзначное число:\n");}
-//             if(i==0){Console.WriteLine("\nВведите трёхзначное число и я скажу вам вторую его цифру:\n");}
+//     while (true){   
+//         try{
+//             Console.WriteLine("\nВведите трёхзначное число и я скажу вам вторую его цифру:\n");
 //             x = Convert.ToInt32(Console.ReadLine());
+//             break;
 //             }
 //         catch{}
 //         }
 //     x = x%100/10;
 //     return x;
 // }
-// void OutPutD2(int x){
-//     Console.WriteLine("\nЭто вторая цифра вашего числа:\n");
-//     Console.WriteLine(x);
+
+// Console.WriteLine("\nЭто вторая цифра вашего числа:\n" + SecondDigit());
+// ------------------------------Задача 2---------------
+// long ThirdNum(long x = 0){
+//     while (true){  
+//             try{
+//                 Console.WriteLine("\nВведите число и я скажу вам его третью цифру : ");
+//                 x = Convert.ToInt64(Console.ReadLine());
+//                 break;}
+//             catch{}
+//         }
+//     x = x/100%10;
+//     return x;
 // }
+// void OutPutD3(long x){
+//     bool y = true;
+//     if(x == 0){
+//         y = false;
+//     }
+//     if(y == true){
+//         Console.WriteLine("\n"+x+" - Это третья цифра вашего числа: ");
+//     }
+//     else{
+//         Console.WriteLine("\nТретьей цифры нет!");
+//     }
+// }   
 
-// OutPutD2(SecondDigit());
-//------------------------------Задача 2---------------
-long ThirdNum(long x = 0){
-    while (true)
-        {  
-            try
-            {
-                Console.WriteLine("\nВведите число и я скажу вам его третью цифру : ");
-                x = Convert.ToInt64(Console.ReadLine());
-                break;
-            }
-            catch{}
-        }
-    x = x/100%10;
-    return x;
-}
-void OutPutD3(long x){
-    bool y = true;
-    if(x == 0){
-        y = false;
-    }
-    if(y == true){
-        Console.Write("\n"+x);
-        Console.WriteLine(" - Это третья цифра вашего числа: ");
-    }
-    else{
-        Console.WriteLine("\nТретьей цифры нет!");
-    }
-}   
-
-OutPutD3(ThirdNum());
-//------------------------------Задача 2 __ v2--------
+// OutPutD3(ThirdNum());
+// ------------------------------Задача 2 __ v2--------
 // char[] Enter(){
 //     Console.WriteLine("Введите число чтоб увидеть его третью цифру: ");
 //     string s = Console.ReadLine();
@@ -70,7 +60,7 @@ OutPutD3(ThirdNum());
 // }
 
 // OutPutD3(Enter());
-//------------------------------Задача 3-------------
+// ------------------------------Задача 3-------------
 // int EnterDayNum(int x = 0){
 //     for(int i = 0; x > 7|x == 0; i++){ 
 //         try
