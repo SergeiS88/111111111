@@ -5,30 +5,56 @@
 12821 -> да
 23432 -> да*/
 
-// char[] ToArray(string s){
-//     char[] ch = new char[s.Length];
-//     for(int i = 0; i < s.Length; i++){
-//         ch[i] = s[i];
+///////////////////////v1///////////////////////////
+
+// bool IsPalindrom(int x){
+//     bool y = true;
+//     int k = 1;
+//     int k2 = 10;
+//     int i = 0;
+//     do{ k=k*10;
+//         i++;}
+//     while(x/k != 0);
+//      Console.WriteLine(i);
+//       Console.WriteLine(k);
+//     for(int j = 1; j < i/2; j++){
+//         if(x/(k/10) != x%k2) y = false;
+//         k2 = k2*10;
 //     }
-//     return ch;
+//     return y;
 // }
 
-// bool IsPal(char[] ch){
-//     bool f = false;
-//     int size = ch.Length;
-//     for(int i =0; i < size/2; i++){
-//         int j = size-i-1;
-//         if(ch[i] == ch[j]) f = true;
+// Console.WriteLine("Введите что-нибудь и узнаете палиндром ли это: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// bool fl = IsPalindrom(num);
+// if(fl == true){
+//     Console.WriteLine("Палиндром");
+// }
+// else{
+//     Console.WriteLine("не палиндром");
+// }
+
+
+//////////////////v2////////////
+
+// bool IsPalindrom(string ch){
+//     bool f = true;
+//     for(int i =0; i < ch.Length/2; i++){
+//         int j = ch.Length-i-1;
+//         if(ch[i] != ch[j]) f = false;
 //     }
 //     return f;
 // }
 
-// Console.WriteLine("Введите число и узнаете палиндром ли оно: ");
+// Console.WriteLine("Введите что-нибудь и узнаете палиндром ли это: ");
 // string str = Console.ReadLine();
-// char[] nums = ToArray(str);
-// bool f = IsPal(nums);
-// Console.WriteLine(f);
-
+// bool fl = IsPalindrom(str);
+// if(fl == true){
+//     Console.WriteLine("палиндром");
+// }
+// else{
+//     Console.WriteLine("не палиндром");
+// }
 
 
 /*Задача 21
