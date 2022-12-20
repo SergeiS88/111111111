@@ -7,32 +7,33 @@
 
 ///////////////////////v1///////////////////////////
 
-// bool IsPalindrom(int x){
-//     bool y = true;
-//     int k = 1;
-//     int k2 = 10;
-//     int i = 0;
-//     do{ k=k*10;
-//         i++;}
-//     while(x/k != 0);
-//      Console.WriteLine(i);
-//       Console.WriteLine(k);
-//     for(int j = 1; j < i/2; j++){
-//         if(x/(k/10) != x%k2) y = false;
-//         k2 = k2*10;
-//     }
-//     return y;
-// }
+bool IsPalindrom(int x){
+    bool y = true;
+    int k = 1;
+    int k2 = 10;
+    int i = 0;
+    while(x/k != 0){
+        k=k*10;
+        i++;
+    }
+     Console.WriteLine(i);
+      Console.WriteLine(k);
+    for(int j = 1; j <= i/2; j++){
+        if(x/(k/10) != x%k2) y = false;
+        k2 = k2*10;
+    }
+    return y;
+}
 
-// Console.WriteLine("Введите что-нибудь и узнаете палиндром ли это: ");
-// int num = Convert.ToInt32(Console.ReadLine());
-// bool fl = IsPalindrom(num);
-// if(fl == true){
-//     Console.WriteLine("Палиндром");
-// }
-// else{
-//     Console.WriteLine("не палиндром");
-// }
+Console.WriteLine("Введите что-нибудь и узнаете палиндром ли это: ");
+int num = Convert.ToInt32(Console.ReadLine());
+bool fl = IsPalindrom(num);
+if(fl == true){
+    Console.WriteLine("Палиндром");
+}
+else{
+    Console.WriteLine("не палиндром");
+}
 
 
 //////////////////v2////////////
