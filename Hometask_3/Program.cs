@@ -26,7 +26,7 @@ bool IsPalindrom(int x){
         if(j > 0){
             k/=10;
             k2*=10;
-            if(x /  k % 10 != x % k2 / k3){
+            if(x/k%10 != x%k2/k3){
                 y = false;
                 break;}
             k3*=10;

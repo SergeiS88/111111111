@@ -62,29 +62,33 @@
 // OutPutD3(Enter());
 // ------------------------------Задача 2 __ v3--------
 // int Func(int x, int y){
+// Console.WriteLine();
 //     int j =1;
+//     int res;
 //     if(y>3){
-//         for(int i =0; i>3; i--){
+//         for(int i=0; i>-2; i--){
 //             j*=10;
 //         }
+//     res = (x/j)%10; 
 //     }
 //     else{
-//         Console.WriteLine("Не то пальто.");
+//         res = 0;
 //     }
-//     int res = (x/j)%10; 
 //     return res;
 // }
 
 // Console.Write("Введи число - получи третий символ: ");
 // int num = Convert.ToInt32(Console.ReadLine());
 // int count = num.ToString().Length;
-// Console.WriteLine(Func(num, count));
+// int digit = Func(num, count);
+// if(digit != 0)Console.WriteLine(digit);
+// else {Console.WriteLine("нема");}
 
 
 
 // ------------------------------Задача 3-------------
 // int EnterDayNum(int x = 0){
-//     for(int i = 0; x > 7|x == 0; i++){ 
+//     for(int i = 0; x > 7|x <= 0; i++){ 
 //         try{
 //             if(i>0){Console.WriteLine("\nПожалуйста введите цифру от 1 до 7 включительно.");
 //                 Console.WriteLine("В неделе 7 дней!\nПн - 1\nВт - 2\nСр - 3\nЧт - 4\nПт - 5\nСб - 6\nВс - 7\n");}
